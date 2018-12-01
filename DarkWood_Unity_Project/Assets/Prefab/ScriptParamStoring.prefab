@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1063009392615940}
+  m_IsPrefabAsset: 1
+--- !u!1 &1063009392615940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4178024258369742}
+  - component: {fileID: 114547413852232058}
+  - component: {fileID: 114828702072446012}
+  m_Layer: 0
+  m_Name: ScriptParamStoring
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4178024258369742
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063009392615940}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 323.3, y: 71.6, z: 230.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114547413852232058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063009392615940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f68908b7f67da64c8f8c56f6b33644f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightShrinkFactor: 1
+  lightMax: 20
+  currentLight: 20
+  lightExpandFactor: 10
+  lightPercentToSpawn: 50
+  light: {fileID: 0}
+  spawnOrbPossible: 0
+--- !u!114 &114828702072446012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063009392615940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4c54bff9e92624c8ada8ae34f38e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 0}
+  walkingSound: {fileID: 8300000, guid: 177732748d3576740aaeb5ab30329060, type: 3}
+  audioSources:
+  - {fileID: 0}
+  - {fileID: 0}
+  randomNightSounds:
+  - {fileID: 8300000, guid: 86116153acb073f44971110211ce29ce, type: 3}
+  - {fileID: 8300000, guid: ebc3446f9d26e7343b37a5097b501aee, type: 3}
+  - {fileID: 8300000, guid: f19953201933c4049a6c2b077319ba72, type: 3}
+  - {fileID: 8300000, guid: e9db79e3dbffb0146b5b5648934f2fcc, type: 3}
+  - {fileID: 8300000, guid: 28f1fc682deb0e94099a6729b55ba3e2, type: 3}
+  - {fileID: 8300000, guid: 74558a6c05e30514abf41d12b0d8ac23, type: 3}
+  - {fileID: 8300000, guid: b260a2d2e6e724c4ca9787d5b6ec7c5d, type: 3}
+  - {fileID: 8300000, guid: d286a0ebed506634b927e666d9b221a0, type: 3}
+  - {fileID: 8300000, guid: 735dfff6552a11d49a28397403d41a7c, type: 3}
+  - {fileID: 8300000, guid: 7769d7491d9b63842bfa2eb36180a819, type: 3}
+  - {fileID: 8300000, guid: 82c829a75fe88a14f904820c4a323c61, type: 3}
+  - {fileID: 8300000, guid: 1bd277ac0dca7e642b9bf3322c414a31, type: 3}
+  - {fileID: 8300000, guid: 2df91d3eac3831a48a6f5b2081665195, type: 3}
+  - {fileID: 8300000, guid: df67d76e58948a9439db0016bed45068, type: 3}
+  nightSoundProbability: 0.08
+  loopingAudioSources:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
