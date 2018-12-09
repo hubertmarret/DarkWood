@@ -43,12 +43,12 @@ public class WolfAudio : MonoBehaviour {
         float distancePlayer = Vector3.Distance(transform.position, player.transform.position);
         if (distancePlayer < distancePlayerThreshold)
         {
-            Debug.Log("Got close");
+            //Debug.Log("Got close");
             PlayRandomSounds(wolfCloseAudio, randomWolfCloseSounds, wolfCloseSoundProbability, 0.95f, 1.05f);
             player.GetComponent<LanternLightManager>().lightShrinkFactor = lightBaseShrinkFactor * distancePlayerThreshold / distancePlayer;
         } else if (distancePlayer < distanceHowl)
         {
-            Debug.Log("Got far");
+            //Debug.Log("Got far");
             PlayRandomSounds(wolfFarAudio, randomWolfFarSounds, wolfFarSoundProbability);
         }
     }

@@ -72,7 +72,7 @@ public class WolfMove : MonoBehaviour {
             timeBeforeMoveRandom = timeBetweenMoveRandom;
             MoveRandom();
         }
-        Debug.Log(timeBeforeMoveRandom);
+        //Debug.Log(timeBeforeMoveRandom);
         player.GetComponent<PlayerAudio>().fadeAmbientSoundWithDistance(_playerDistance, rangeEndOfAmbientSound, rangeForHowlTrigger);
 
 	}
