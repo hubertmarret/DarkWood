@@ -12,7 +12,10 @@ public class CameraBehaviour : MonoBehaviour {
 
     void LateUpdate()
     {
-        transform.RotateAround(target.transform.position, transform.up, Input.GetAxis("Mouse X") * rotateSpeed);
+        if (Input.GetAxis("Mouse X") != 0)
+        {
+            transform.RotateAround(target.transform.position, transform.up, Input.GetAxis("Mouse X") * rotateSpeed);
+        }
 
         Vector3 positionCam = transform.position;
         Quaternion rotationCam = transform.rotation;

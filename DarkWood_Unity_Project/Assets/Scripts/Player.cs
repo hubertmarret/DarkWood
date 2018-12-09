@@ -40,40 +40,40 @@ public class Player : MonoBehaviour {
             Vector3 worldCamPosition = new Vector3(playerCamera.transform.position.x, playerCamera.transform.position.y, playerCamera.transform.position.z);
             Quaternion worldCamRotation = new Quaternion(playerCamera.transform.rotation.x, playerCamera.transform.rotation.y, playerCamera.transform.rotation.z, playerCamera.transform.rotation.w);
 
-            Vector3 vecCam = Vector3.forward;
+            Vector3 vecDir = Vector3.forward;
 
             if (Input.GetKey("z"))
             {
-                vecCam = playerCamera.transform.forward;
-                vecCam.y = 0;
-                vecCam = vecCam.normalized;
+                vecDir = playerCamera.transform.forward;
+                vecDir.y = 0;
+                vecDir = vecDir.normalized;
             }
             else if (Input.GetKey("s"))
             {
-                vecCam = playerCamera.transform.forward;
-                vecCam.y = 0;
-                vecCam = vecCam.normalized * (-1);
+                vecDir = playerCamera.transform.forward;
+                vecDir.y = 0;
+                vecDir = vecDir.normalized * (-1);
             }
             else if (Input.GetKey("d"))
             {
-                vecCam = playerCamera.transform.right;
-                vecCam.y = 0;
-                vecCam = vecCam.normalized;
+                vecDir = playerCamera.transform.right;
+                vecDir.y = 0;
+                vecDir = vecDir.normalized;
             }
             else if (Input.GetKey("q"))
             {
-                vecCam = playerCamera.transform.right;
-                vecCam.y = 0;
-                vecCam = vecCam.normalized * (-1);
+                vecDir = playerCamera.transform.right;
+                vecDir.y = 0;
+                vecDir = vecDir.normalized * (-1);
             }
 
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(vecCam), rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(vecDir), rotationSpeed * Time.deltaTime);
 
             playerCamera.transform.position = worldCamPosition;
             playerCamera.transform.rotation = worldCamRotation;
 
-            //transform.position += vecCam * mouvementSpeed * Time.deltaTime;
-            rb.MovePosition(transform.position + vecCam * mouvementSpeed * Time.deltaTime);
+            //transform.position += vecDir * mouvementSpeed * Time.deltaTime;
+            rb.MovePosition(transform.position + vecDir * mouvementSpeed * Time.deltaTime);
 
             walking = true;
             animator.SetBool("Walk", true);
